@@ -8,7 +8,10 @@ class Application
 
     if req.path.match(/items/)
         binding.pry
-        req.path.include?(@@items)
+        req.path.gsub("/items/", "")
+        @@items.find do |item|
+
+        end
     elsif !req.path.include?("items")
          resp.write "Route not found"
          rep.status = 404
