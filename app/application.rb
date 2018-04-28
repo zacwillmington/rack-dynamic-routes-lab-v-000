@@ -9,5 +9,6 @@ class Application
 
     else
         resp.write "Route not found"
+        rep.status = 404
     end
 end
