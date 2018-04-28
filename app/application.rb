@@ -6,7 +6,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    #binding.pry
+    binding.pry
     if req.path.match(/items/)
         #binding.pry
     else
