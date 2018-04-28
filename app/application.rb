@@ -18,7 +18,7 @@ class Application
             resp.write item_availiable.price
             req.status = 200
         end
-    elsif !req.path.include?(/items/)
+    elsif !req.path.match(/items/)
          resp.write "Route not found"
          req.status = 404
     end
