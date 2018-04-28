@@ -10,6 +10,7 @@ class Application
         binding.pry
         item_add = req.path.gsub("/items/", "")
         @@items.find do |item|
+            binding.pry
             item_add == item.name
         end
     elsif !req.path.include?("items")
