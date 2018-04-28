@@ -5,5 +5,6 @@ class Application
     req = Rack::Request.new(env)
 
     if req.match(/items/)
-    binding.pry
+        binding.pry
+    end
 end
