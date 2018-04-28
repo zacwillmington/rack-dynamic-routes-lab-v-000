@@ -15,8 +15,8 @@ class Application
             resp.write "Item not found"
             req.status = 400
         else
-        item_availiable.price
-        req.status = 200
+            resp.write item_availiable.price
+            req.status = 200
         end
     elsif !req.path.include?("items")
          resp.write "Route not found"
