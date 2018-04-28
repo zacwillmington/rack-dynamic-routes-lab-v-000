@@ -7,10 +7,10 @@ class Application
     req = Rack::Request.new(env)
 
     binding.pry
-    
+
     if req.path.match(/items/)
         #binding.pry
-    else
+    elsif !req.path.include?("items")
         resp.write "Item not found"
         # resp.write "Route not found"
         # rep.status = 404
