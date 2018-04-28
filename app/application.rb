@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.match(/items/)
+    if req.match(/items/Pears)
         binding.pry
 
     else
