@@ -8,7 +8,7 @@ class Application
 
     if req.path.match(/items/)
         binding.pry
-        req.path.gsub("/items/", "")
+        item = req.path.gsub("/items/", "")
         @@items.find do |item|
 
         end
