@@ -8,9 +8,9 @@ class Application
 
     if req.path.match(/items/)
         binding.pry
-        item = req.path.gsub("/items/", "")
+        item_add = req.path.gsub("/items/", "")
         @@items.find do |item|
-
+            item_add == item.name
         end
     elsif !req.path.include?("items")
          resp.write "Route not found"
