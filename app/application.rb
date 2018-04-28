@@ -13,10 +13,10 @@ class Application
                 end
         if item_availiable == nil
             resp.write "Item not found"
-            req.status = 400
+            resp.status = 400
         else
             resp.write item_availiable.price
-            req.status = 200
+            resp.status = 200
         end
     elsif !req.path.match(/items/)
          resp.write "Route not found"
