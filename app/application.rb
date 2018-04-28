@@ -11,9 +11,10 @@ class Application
     if req.path.match(/items/)
         #binding.pry
     elsif !req.path.include?("items")
-        resp.write "Item not found"
         # resp.write "Route not found"
         # rep.status = 404
+    else
+        resp.write "Item not found"
     end
     resp.finish
     end
