@@ -9,15 +9,18 @@ class Application
     if req.path.match(/items/)
         item_add = req.path.gsub("/items/", "")
         item_availiable = @@items.find do |item|
-                item_add == item.name
-            end
+                    item_add == item.name
+                end
+        if item_availiable == nil
+            resp.write "Item not found"
+            res.status = 400
+        else
         item_availiable.price
         res.status = 200
+        end
     elsif !req.path.include?("items")
          resp.write "Route not found"
          rep.status = 404
-    else
-        resp.write "Item not found"
     end
     resp.finish
     end
