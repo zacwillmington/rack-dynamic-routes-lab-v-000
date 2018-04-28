@@ -10,7 +10,7 @@ class Application
         item_add = req.path.gsub("/items/", "")
         item_availiable = @@items.find do |item|
                 item_add == item.name
-            end.price
+            end
         item_availiable.price
         res.status = 200
     elsif !req.path.include?("items")
