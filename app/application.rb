@@ -8,11 +8,11 @@ class Application
 
     if req.path.match(/items/)
         item_add = req.path.gsub("/items/", "")
-        it = @@items.find do |item|
+        item_availiable = @@items.find do |item|
                 item_add == item.name
-            end
+            end.price
         binding.pry
-        it.price
+        item_availiable.price
         res.status = 200
     elsif !req.path.include?("items")
          resp.write "Route not found"
