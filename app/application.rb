@@ -6,5 +6,8 @@ class Application
 
     if req.match(/items/)
         binding.pry
+
+    else
+        resp.write "Route not found"
     end
 end
