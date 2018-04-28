@@ -6,8 +6,6 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    binding.pry
-
     if req.path.match(/items/)
         binding.pry
     elsif !req.path.include?("items")
