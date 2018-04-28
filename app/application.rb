@@ -12,6 +12,7 @@ class Application
                 item_add == item.name
             end
         binding.pry
+        it.price
         res.status = 200
     elsif !req.path.include?("items")
          resp.write "Route not found"
